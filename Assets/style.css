@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: lightgray;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.brewerMe {
+  color: darkblue;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.motto {
+  color: darkblue;
+  margin-bottom: 30px;
+}
+
+.formSubmit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#searchBox {
+  padding: 10px;
+  font-size: 16px;
+  width: 500px;
+  margin-bottom: 20px;
+}
+
+.submit {
+  background-color: darkblue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
