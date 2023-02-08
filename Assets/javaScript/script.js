@@ -1,7 +1,7 @@
-var weatherAPI = "6040b55b9139f3c39b946cd8cf88aa08"
+var willisAPI = "6040b55b9139f3c39b946cd8cf88aa08"
 
 // Fetching current weather base on Coordinates
-fetch('https://api.openweathermap.org/data/2.5/weather?lat=35.5297010&lon=-81.2185749&appid=' + weatherAPI)
+fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=` + willisAPI)
     
 .then((response) => response.json())
 .then((data) => console.log('Weather', data));
