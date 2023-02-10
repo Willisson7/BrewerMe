@@ -1,11 +1,12 @@
 var weatherAPI = "6040b55b9139f3c39b946cd8cf88aa08";
 var submit = document.querySelector('.submit');
-var cityInput = document.querySelector('#searchBox');
+var cityInput = document.querySelector('.searchBox');
+var stateInput = document.querySelector('#stateInput')
 // Fetching current weather base on Coordinates
 
 //Find City/Brewery Input
 function coordinates(city){
-fetch(`https://api.openbrewerydb.org/breweries?by_city=` + city + `&per_page=1`)
+fetch(`https://api.openbrewerydb.org/breweries?by_city=${cityInput.value}&by_state=${stateInput.value}&per_page=5`)
 
 .then((response) => response.json())
 .then((data) => {
@@ -34,7 +35,8 @@ function currentWeather(city) {
 }
 
 submit.addEventListener('click', function() {
-    var input = document.querySelector('#searchBox').value
+
+    var input = document.querySelector('.searchBox').value
     document.getElementById("invis").classList.remove("hidden")
     console.log(input);
     coordinates(input);
