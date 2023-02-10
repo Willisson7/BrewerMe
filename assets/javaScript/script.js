@@ -12,8 +12,8 @@ fetch(`https://api.openbrewerydb.org/breweries?by_city=` + city + `&per_page=1`)
     console.log('Brewery', data)
         // check to see if data is null
         if (data && data.length != 0){
-            currentWeather(data[0].latitude, data[0].longitude)
-            console.log(data[0].latitude, data[0].longitude)
+            currentWeather(data[0].name)
+            console.log(data[0].city)
         }
         else {
             alert('City Not Found')
@@ -23,9 +23,9 @@ fetch(`https://api.openbrewerydb.org/breweries?by_city=` + city + `&per_page=1`)
 );
 }
 //Pass cityInput into weather fetch url
-function currentWeather(lat, lon) {
-    console.log("coordinates", lat, lon)
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=` + weatherAPI)
+function currentWeather(city) {
+    console.log("coordinates")
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=${weatherAPI}`)
     
         .then((response) => response.json())
         .then((data) => {
