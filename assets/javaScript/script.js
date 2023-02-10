@@ -19,7 +19,6 @@ fetch(`https://api.openbrewerydb.org/breweries?by_city=${cityInput.value}&by_sta
         else {
             alert('City Not Found')
         }
-        
     }
 );
 }
@@ -31,13 +30,14 @@ function currentWeather(city) {
         .then((response) => response.json())
         .then((data) => {
             console.log('Weather', data)
-    }
+        }
     );
-
 }
 
 submit.addEventListener('click', function() {
+
     var input = document.querySelector('.searchBox').value
+    document.getElementById("invis").classList.remove("hidden")
     console.log(input);
     coordinates(input);
 })
