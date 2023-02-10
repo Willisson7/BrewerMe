@@ -35,7 +35,7 @@ function currentWeather(city) {
 }
 
 submit.addEventListener('click', function() {
-
+    
     var input = document.querySelector('.searchBox').value
     document.getElementById("invis").classList.remove("hidden")
     console.log(input);
