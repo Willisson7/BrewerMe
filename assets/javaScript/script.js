@@ -6,19 +6,29 @@ var stateInput = document.querySelector('#stateInput')
 
 //Find City/Brewery Input
 function coordinates(city){
+    var brewName= document.createElement('button')
+    var brewPhone= document.createElement('p')
+    var brewName1= document.createElement('p')
 fetch(`https://api.openbrewerydb.org/breweries?by_city=${cityInput.value}&by_state=${stateInput.value}&per_page=5`)
-
 .then((response) => response.json())
 .then((data) => {
     console.log('Brewery', data)
-        // check to see if data is null
+    // check to see if data is null
         if (data && data.length != 0){
             currentWeather(data[0].name)
-            console.log(data[0].city)
+            console.log(data[0].city)  
         }
         else {
             alert('City Not Found')
         }
+brewName.textContent = data[0].name
+document.querySelector('.brewName').append(brewName);
+brewPhone.textContent = data[0].phone
+brewPhone.classList.add('.none')
+brewName.addEventListener("click", () => brewPhone.classList="")
+document.querySelector('.brewName').append(brewPhone)
+brewName1.textContent = data[1].name
+document.querySelector('.brewName').append(brewName1);
     }
 );
 }
@@ -34,6 +44,9 @@ function currentWeather(city) {
     );
 }
 
+
+
+
 submit.addEventListener('click', function() {
     
     var input = document.querySelector('.searchBox').value
@@ -41,5 +54,4 @@ submit.addEventListener('click', function() {
     console.log(input);
     coordinates(input);
 })
-
 
