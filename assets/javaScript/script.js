@@ -10,8 +10,15 @@ fetch(`https://api.openbrewerydb.org/breweries?by_city=` + city + `&per_page=1`)
 .then((response) => response.json())
 .then((data) => {
     console.log('Brewery', data)
-        currentWeather(data[0].latitude, data[0].longitude)
-        console.log(data[0].latitude, data[0].longitude)
+        // check to see if data is null
+        if (data && data.length != 0){
+            currentWeather(data[0].latitude, data[0].longitude)
+            console.log(data[0].latitude, data[0].longitude)
+        }
+        else {
+            alert('City Not Found')
+        }
+        
     }
 );
 }
@@ -35,10 +42,3 @@ submit.addEventListener('click', function() {
 })
 
 
-// on sumbit click, website passes user input into a fetch request to find city location
-// Once Location is found, website passes location
-// function findLocation(){
-
-    
-// submit.on('click', findLocation);
-// }
