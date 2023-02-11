@@ -12,8 +12,14 @@ function coordinates(city) {
     fetch(`https://api.openbrewerydb.org/breweries?by_city=${cityInput.value.trim()}&by_state=${stateInput.value.trim()}&per_page=5`)
         .then((response) => response.json())
         .then((data) => {
-            document.querySelector('.brewName').innerHTML="";
-            console.log('Brewery', data)
+            document.querySelector('.brewName').innerHTML = "";
+            for (var i = 0; i < data.length; i++) {
+                brewInfo();
+            }
+
+
+                console.log('Brewery', data)
+
             // check to see if data is null
             if (data && data.length != 0) {
                 currentWeather(data[0].name)
@@ -32,6 +38,13 @@ function coordinates(city) {
             }
         }
         );
+}
+//function to return brewInfo, url, street address, and phone number
+function brewInfo(data) {
+    info = data['phone' + 'website_url' + 'street']
+    info.textContent = data[i];
+
+    document.querySelector('.brewName').append(info);
 }
 //Pass cityInput into weather fetch url
 function currentWeather(city) {
