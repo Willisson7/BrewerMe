@@ -64,9 +64,9 @@ body {
   display: flex;
 }
 
-.brewName{
-  /* list-style: none; */
-}
+/* .brewName{
+  /* list-style: none; 
+} */
 
 .pictures{
   height: 250px;
