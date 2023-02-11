@@ -18,6 +18,10 @@ body {
   margin-right: 20px;
 }
 
+.devPage{
+  list-style: none;
+}
+
 .brewerMe {
   color: darkblue;
   margin-top: 50px;
@@ -54,4 +58,17 @@ body {
 
 .hidden{
   display: none;
+}
+
+.brewLocations{
+  display: flex;
+}
+
+.brewName{
+  /* list-style: none; */
+}
+
+.pictures{
+  height: 250px;
+  width: 250px;
 }
