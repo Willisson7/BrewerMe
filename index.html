@@ -8,40 +8,48 @@
     <title>Brewer Me</title>
 </head>
 <body>
-    <div class="hide">
+    <div class="searchMe">
         <header class="header">
-            <li class="devPage"><a href="#" >About The Devs</a></li>
+            <button class="devPage"><a href="#" class="devPage" >About The Devs</a></button>   
         </header>
         <div>
             <h1 class="brewerMe">Welcome to Brewer Me!</h1>
         </div>
         <div class="motto">
-            <p>A drink for any situation!</p>
+            <p><strong>🍺A drink for any situation!🍺</strong></p>
         </div>
         <div class="formSubmit">
-            <input type="text" class="searchBox" placeholder="Please enter your location to begin your journey">
+            <input type="text" class="searchBox" placeholder="Please enter your CITY to begin your journey">
         </div>
         <div class="formSubmit">
-            <input type="text" class="searchBox" id="stateInput" placeholder="Please enter State name">
+            <input type="text" class="searchBox" id="stateInput" placeholder="Please enter your STATE">
             <button class="submit">SUBMIT</button>
         </div>
     </div>
 
-    <div class="hidden" id="invis">
-        <h2 class="devInfo">About the Creators</h2>
-        <p>If you have come to learn about the awesome creators you are in the right place. This app was designed for anybody who has a passion for alcohol no matter where they are. 
-            The thought process behind our application may not be complex to you, but building this as a first project has come to be an experience that holds value. There are three creators who 
-            have put an immense amount of work into this application; Grant Willis, Cole Kasabian, and Jose Carrasco. All three of us have spent time working on different parts of the application
-            all with great importance. As new developers we would love any constructive feedback that anyone is willing to share. We have included our contact information <a href="#">below</a>, feel 
-            free to reach out and let us know what you think.</p>
-        <h4>Thank you for reading, Happy Brewer Me!</h4>
+    <div class="developers hidden" id="invis">
+        <div class="header">
+            <button class="devPage"><a href="#" class="devPage" >About The Devs</a></button>
+        </div>
+        <div class="aboutContent">
+            <h2 class="devHead">About the Creators</h2>
+            <p class="devParagraph">If you have come to learn about the awesome creators you are in the right place. This app was designed for anybody who has a passion for alcohol no matter where they are. 
+                The thought process behind our application may not be complex to you, but building this as a first project has come to be an experience that holds value. There are three creators who 
+                have put an immense amount of work into this application; Grant Willis, Cole Kasabian, and Jose Carrasco. All three of us have spent time working on different parts of the application
+                all with great importance. As new developers we would love any constructive feedback that anyone is willing to share. We have included our contact information below, feel 
+                free to reach out and let us know what you think.</p>
+            <h4>Thank you for reading, Happy Brewer Meing!</h4>         
+        </div>
     </div>
-    <div class="gone">
-        <h2>Brewer Me</h2>
+    <div class="searchPage hidden">
+        <div class="header">
+            <button class="devPage"><a href="#" class="devPage" >About The Devs</a></button>
+        </div>
+        <h2 class="brewHeader">🍻Brewer Me🍻</h2>
         <div class="brewLocations">
-            <ul>
-                <li class="brewName" id="brew1"></li>
-                <p class="brewDescription">info</p>
+            <ul class="breweries">
+                <li class="brewName" id="brew1">Testing</li>
+                <p class="brewDescription"></p>
                 <li class="brewName" id="brew2"></li>
                 <p class="brewDescription"></p>
                 <li class="brewName" id="brew3"></li>
@@ -51,14 +59,13 @@
                 <li class="brewName" id="brew5"></li>
                 <p class="brewDescription"></p>
             </ul>
-        </div>
-        <div class="brewIMG">
-
-        </div>
-        <div class="weatherData">
-            <img src="assets/img/cloudy.jpeg" alt="Cloudy weather" class="pictures hidden">
-            <img src="assets/img/rain.jpeg" alt="Rainy weather" class="pictures hidden">
-            <img src="assets/img/sunny.jpeg" alt="Sunny weather" class="pictures hidden">
+            <div class="brewIMG">
+            </div>
+            <div class="weatherData">
+                <img src="assets/img/cloudy.jpeg" alt="Cloudy weather" class="pictures ">
+                <img src="assets/img/rain.jpeg" alt="Rainy weather" class="pictures hidden">
+                <img src="assets/img/sunny.jpeg" alt="Sunny weather" class="pictures hidden">
+            </div>
         </div>
         <div class="suggestion">
 
