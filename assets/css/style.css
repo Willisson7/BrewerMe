@@ -101,3 +101,9 @@ body {
   line-height: 30px;
 }
 
+#weatherSuggestion{
+  font-size: 25px;
+  color: black;
+  font-weight: bold;
+}
+
