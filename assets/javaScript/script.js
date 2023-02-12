@@ -17,11 +17,11 @@ function coordinates(city) {
         .then((data) => {
             document.querySelector('.brewName').innerHTML = "";
             for (var i = 0; i < data.length; i++) {
-             let results = brewInfo(data[i]);
+                // let results = brewInfo(data[i]);
 
-             console.log("look here!", results)
-             
-                
+                // console.log("look here!", results)
+
+
 
 
 
@@ -71,15 +71,19 @@ function coordinates(city) {
 }
 //function to return brewInfo, url, street address, and phone number
 function brewInfo(dataElement) {
-brewClass = document.querySelector(".brewName")
- brewName = dataElement.name
- brewPhone = dataElement.phone
- brewWeb = dataElement.website_url
+    var brewClass = document.querySelector(".brewName")
+    var brewName = dataElement.name
+    var brewPhone = dataElement.phone
+    var brewWeb = dataElement.website_url
+
+    var line = document.createElement('p')
+    line.className = "line";
+    line.innerHTML = brewName + brewPhone + brewWeb;
 
 
 
- document.querySelector(".brewName").append(brewName, brewPhone, brewWeb)
-// console.log("Look Here", dataElement.name, dataElement.phone, dataElement.website_url)
+    document.querySelector(".brewName").append(line)
+    // console.log("Look Here", dataElement.name, dataElement.phone, dataElement.website_url)
 
 }
 
