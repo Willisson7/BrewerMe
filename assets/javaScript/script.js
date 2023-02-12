@@ -33,7 +33,7 @@ function coordinates(city) {
                 // brewPhone.classList.add('.none')
                 // brewName.addEventListener("click", () => brewPhone.classList = "")
                 document.querySelector('.brewName').append(brewPhone)
-
+                
                 brew1.textContent = data[0].name
                 document.querySelector('#brew1').append(brew1);
 
@@ -78,6 +78,48 @@ function currentWeather(city) {
         .then((response) => response.json())
         .then((data) => {
             console.log('Weather', data)
+            var clouds = data.weather[0].description
+            var suggested = document.getElementById('weatherSuggestion')
+            var rainImg = document.getElementById("rainPic")
+            var sunnyImg = document.getElementById("sunnyPic")
+            var cloudyImg = document.getElementById("cloudyPic")
+            console.log(clouds)
+            if(clouds == "clear sky"){
+                suggested.textContent = "The sun is out! So are you drinking a beer yet?"
+                sunnyImg.classList.remove("hidden")
+            }
+            else if(clouds == "few clouds"){
+                suggested.textContent = "The sun is out! So are you drinking a beer yet?"
+                sunnyImg.classList.remove("hidden")
+            }
+            else if(clouds == "scattered clouds"){
+                suggested.textContent = "Looks like the sun should be peaking through, and there should be a nice cold beer in your hand!"
+                cloudyImg.classList.remove("hidden")
+            }
+            else if(clouds == "broken clouds"){
+                suggested.textContent = "Looks like the sun should be peaking through, and there should be a nice cold beer in your hand!"
+                cloudyImg.classList.remove("hidden")
+            }
+            else if(clouds == "shower rain") {
+                suggested.textContent = "Might want to take a rain check... SIKE it is just water! Safely go out and grab a nice brewsky!"
+                rainImg.classList.remove("hidden")
+            }
+            else if (clouds == "rain"){
+                suggested.textContent = "Might want to take a rain check... SIKE it is just water! Safely go out and grab a nice brewsky!"
+                rainImg.classList.remove("hidden")
+            }
+            else if(clouds == "thunderstorm"){
+                suggested.textContent = "Might want to take a rain check... SIKE it is just water! Safely go out and grab a nice brewsky!"
+                rainImg.classList.remove("hidden")
+            }
+            else if(clouds =="snow"){
+                suggested.textContent = "Might want to take a rain check... SIKE it is just water! Safely go out and grab a nice brewsky!"
+                rainImg.classList.remove("hidden")
+            }
+            else{
+                suggested.textContent = "Might want to take a rain check... SIKE it is just water! Safely go out and grab a nice brewsky!"
+                rainImg.classList.remove("hidden")
+            }
         }
         );
 }
@@ -89,6 +131,7 @@ submit.addEventListener('click', function () {
 
     var input = document.querySelector('.searchBox').value
     document.getElementById("invis").classList.remove("hidden")
+    document.querySelector(".searchMe").classList.add("hidden")
     console.log(input);
     coordinates(input);
 })
