@@ -75,7 +75,9 @@ body {
 
 .brewLocations{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  height: 50vh;
+ 
 }
 
 .brewName{
@@ -114,5 +116,11 @@ body {
   font-size: 25px;
   color: black;
   font-weight: bold;
+  width: 25vh;
 }
 
+.line{
+  color: goldenrod;
+  line-height: 35px;
+  padding-left: 0px;
+}
