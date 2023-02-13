@@ -12,9 +12,17 @@ body {
   justify-content: center;
   padding: 20px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
+.return{
+  color: white;
+  text-decoration: none;
+  border: none;
+  background-color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
 
 .devPage{
   color: white;
@@ -22,6 +30,7 @@ body {
   border: none;
   background-color: inherit;
   font: inherit;
+  cursor: pointer;
 }
 
 .brewerMe {
