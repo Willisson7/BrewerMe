@@ -59,39 +59,39 @@ function currentWeather(city) {
             var cloudyImg = document.getElementById("cloudyPic")
             console.log(clouds)
             if (clouds == "clear sky") {
-                suggested.textContent = "☀️The sun is out! So are you drinking a beer yet?☀️"
+                suggested.textContent = "☀️The sun is out! Try a flavorful Kolsch☀️"
                 sunnyImg.classList.remove("hidden")
             }
             else if (clouds == "few clouds") {
-                suggested.textContent = "☀️The sun is out! So are you drinking a beer yet?☀️"
+                suggested.textContent = "☀️The sun is out! Why not try a Witbier from a local brewery?☀️"
                 sunnyImg.classList.remove("hidden")
             }
             else if (clouds == "scattered clouds") {
-                suggested.textContent = "⛅Looks like the sun should be peaking through, and there should be a nice cold beer in your hand!⛅"
+                suggested.textContent = "⛅Looks like the sun should be peaking through, can't go wrong with a Lager!⛅"
                 cloudyImg.classList.remove("hidden")
             }
             else if (clouds == "broken clouds") {
-                suggested.textContent = "⛅Looks like the sun should be peaking through, and there should be a nice cold beer in your hand!⛅"
+                suggested.textContent = "⛅Looks like the sun should be peaking through, and there should be a nice cold IPA should do the trick!⛅"
                 cloudyImg.classList.remove("hidden")
             }
             else if (clouds == "shower rain") {
-                suggested.textContent = "🌧️Might want to take a rain check... SIKE it is just water! Safely go out and grab a nice brewsky!🌧️"
+                suggested.textContent = "🌧️Might want to take a rain check... SIKE it is just water! Safely go out and try a local Gose!🌧️"
                 rainImg.classList.remove("hidden")
             }
             else if (clouds == "rain") {
-                suggested.textContent = "🌧️Might want to take a rain check... SIKE it is just water! Safely go out and grab a nice brewsky!🌧️"
+                suggested.textContent = "🌧️Might want to take a rain check... SIKE it is just water! Safely go out and grab a nice Hefeweizen!🌧️"
                 rainImg.classList.remove("hidden")
             }
             else if (clouds == "thunderstorm") {
-                suggested.textContent = "🌧️Might want to take a rain check... SIKE it is just water! Safely go out and grab a nice brewsky!🌧️"
+                suggested.textContent = "🌧️Might want to take a rain check... SIKE it is just water! Safely go out and try a glass of Hefeweizen !🌧️"
                 rainImg.classList.remove("hidden")
             }
             else if (clouds == "snow") {
-                suggested.textContent = "🌧️Might want to take a rain check... SIKE it is just water! Safely go out and grab a nice brewsky!🌧️"
+                suggested.textContent = "🌧️Might want to take a rain check... SIKE it is just water! Safely go out and grab a Saison!🌧️"
                 rainImg.classList.remove("hidden")
             }
             else {
-                suggested.textContent = "🌧️Might want to take a rain check... SIKE it is just water! Safely go out and grab a nice brewsky!🌧️"
+                suggested.textContent = "🌧️Might want to take a rain check... SIKE it is just water! Safely go out and try some local Mead!🌧️"
                 rainImg.classList.remove("hidden")
             }
         }
