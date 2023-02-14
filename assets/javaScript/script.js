@@ -8,7 +8,7 @@ var aboutBtn = document.querySelector('.devPage');
 
 //Find City/Brewery Input
 function coordinates(city) {
-    fetch(`https://api.openbrewerydb.org/breweries?by_city=${cityInput.value.trim()}&by_state=${stateInput.value.trim()}&per_page=5`)
+    fetch(`https://api.openbrewerydb.org/breweries?by_city=${cityInput.value.trim()}&by_state=${stateInput.value.trim()}&per_page=20`)
         .then((response) => response.json())
         .then((data) => {
             document.querySelector('.brewName').innerHTML = "";
@@ -39,7 +39,7 @@ function brewInfo(dataElement) {
 
     var line = document.createElement('p')
     line.className = "line";
-    line.innerHTML = "Brewery Name: " + brewName + "<br>" + "Phone Number: " + brewPhone + "<br>" + "Website Link: " + brewWeb;
+    line.innerHTML = "Brewery Name: " + brewName + "<br>" + "Phone Number: " + brewPhone + "<br>" + "Website Link: <a href=\"" + brewWeb + "\">" + brewWeb +"</a>";
 
     document.querySelector(".brewName").append(line);
     // console.log("Look Here", dataElement.name, dataElement.phone, dataElement.website_url)
