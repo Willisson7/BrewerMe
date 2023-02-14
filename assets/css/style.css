@@ -14,12 +14,12 @@ body {
 .header {
   background-color: black;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 20px;
 }
 
 .return{
-  color: white;
+  color: goldenrod;
   text-decoration: none;
   border: none;
   background-color: inherit;
@@ -28,7 +28,7 @@ body {
 }
 
 .devPage{
-  color: white;
+  color: goldenrod;
   text-decoration: none;
   border: none;
   background-color: inherit;
@@ -61,19 +61,23 @@ body {
 .searchBox {
   padding: 10px;
   font-size: 16px;
-  width: 55%;
+  width: 45%;
   margin-bottom: 20px;
 
 }
 
 .submit {
   background-color: darkblue;
-  color: white;
+  display: flex;
+  color: goldenrod;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 30%
+  width: 20%;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
 }
 
 .hidden{
@@ -82,9 +86,8 @@ body {
 
 .brewLocations{
   display: flex;
-  justify-content: center;
   height: 50vh;
- 
+  border: 5px black;
 }
 
 .brewName{
@@ -101,6 +104,7 @@ body {
 
 .brewHeader{
   font-size: 35px;
+  padding: 15px 0px 15px 0px;
 }
 
 .aboutContent{
@@ -121,38 +125,52 @@ body {
 
 #weatherSuggestion{
   font-size: 25px;
-  color: black;
+  color: goldenrod;
   font-weight: bold;
-  width: 25vh;
+  margin:45px 0px 55px 0px ;
+  background-color: grey;
+  border-radius: 5px;
 }
 
 .line{
   color: goldenrod;
   line-height: 35px;
   padding-left: 0px;
+  background-color: grey;
+  border-radius: 5px;
+}
+
+.failHeader{
+  margin-top: 35px;
+}
+
+
+.breweries{
+  margin-right: 150px;
 }
 
 /* Larger than mobile */
-@media (min-width: 400px) {
-
+@media (max-width: 400px) {
+  
 }
 
 /* Larger than phablet */
-@media (min-width: 550px) {
+@media (max-width: 550px) {
+.searchPage{
+  width: 100%;
+}
 
 }
 
 /* Larger than tablet */
-@media (min-width: 750px) {
-
+@media (max-width: 750px) {
+  .searchPage{
+    width: 100%;
+  }
 }
 
 /* Larger than desktop */
-@media (min-width: 1000px) {
+@media (max-width: 1000px) {
 
 }
 
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {
-  
-}
