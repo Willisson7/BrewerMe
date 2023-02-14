@@ -21,7 +21,6 @@ function coordinates(city) {
             // check to see if data is null
             if (data && data.length != 0) {
                 currentWeather(data[0].name)
-                console.log(data[0].city)
             }
             else{      
                 document.getElementById("invis").classList.add("hidden")
@@ -37,6 +36,14 @@ function brewInfo(dataElement) {
     var brewName = dataElement.name
     var brewPhone = dataElement.phone
     var brewWeb = dataElement.website_url
+
+    if(brewPhone == null){
+        brewPhone = "Not Available";
+    }
+    if(brewWeb == null){
+        brewWeb = "Not Available";
+
+    }
 
     var line = document.createElement('p')
     line.className = "line";
@@ -107,6 +114,7 @@ aboutBtn.addEventListener('click', function(){
 submit.addEventListener('click', function (event) {
 
     var input = document.querySelector('.searchBox').value
+    document.querySelector('.brewHeader').classList.remove("hidden")
     document.getElementById("invis").classList.remove("hidden")
     document.querySelector(".searchMe").classList.add("hidden")
     console.log(input);
