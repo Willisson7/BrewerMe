@@ -8,7 +8,7 @@ var aboutBtn = document.querySelector('.devPage');
 
 //Find City/Brewery Input
 function coordinates(city) {
-    fetch(`https://api.openbrewerydb.org/breweries?by_city=${cityInput.value.trim()}&by_state=${stateInput.value.trim()}&per_page=20`)
+    fetch(`https://api.openbrewerydb.org/breweries?by_city=${cityInput.value.trim()}&by_state=${stateInput.value.trim()}&per_page=5`)
         .then((response) => response.json())
         .then((data) => {
             document.querySelector('.brewName').innerHTML = "";
@@ -23,12 +23,13 @@ function coordinates(city) {
                 currentWeather(data[0].name)
                 console.log(data[0].city)
             }
-            else {
-                alert('City Not Found')
+            else{      
+                document.getElementById("invis").classList.add("hidden")
+                document.querySelector('.failed').classList.remove("hidden")
             }
         }
         );
-      
+
 }
 //function to return brewInfo, url, street address, and phone number
 function brewInfo(dataElement) {
