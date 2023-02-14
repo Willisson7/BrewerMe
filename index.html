@@ -9,11 +9,11 @@
     <title>Brewer Me</title>
 </head>
 <body>
+    <header class="header">
+        <button class="devPage">About The Devs</button>
+        <button class="return"><a href="./index.html"class="return">Search A City</a></button> 
+    </header>
     <div class="searchMe">
-        <header class="header">
-            <button class="devPage">About The Devs</button>  
-            <button class="return"><a href="./index.html"class="return">Search A City</a></button> 
-        </header>
         <div>
             <h1 class="brewerMe">Welcome to Brewer Me!</h1>
         </div>
@@ -30,10 +30,6 @@
     </div>
 
     <div class="developers hidden">
-        <div class="header">
-            <button class="devPage">About The Devs</button>
-            <button class="return"><a href="./index.html"class="return">Search A City</a></button> 
-        </div>
         <div class="aboutContent">
             <h2 class="devHead">About the Creators</h2>
             <p class="devParagraph">If you have come to learn about the awesome creators you are in the right place. This app was designed for anybody who has a passion for alcohol no matter where they are. 
@@ -44,23 +40,17 @@
             <h4>Thank you for reading, Happy Brewer Meing!</h4>         
         </div>
     </div>
-    <div class="searchPage hidden" id="invis">
-        <div class="header">
-            <button class="devPage">About The Devs</button>
-            <button class="return"><a href="./index.html"class="return">Search A City</a></button> 
-        </div>
+    <div class="searchPage hidden container" id="invis">
         <h2 class="brewHeader">🍻Brewer Me🍻</h2>
-        <div class="brewLocations">
-            <ul class="breweries">
+        <div class="brewLocations row">
+            <ul class="breweries six columns">
                 <li class="brewName" id="brew1"></li>
                 <p class="brewDescription"></p>
             </ul>
-            <div class="brewIMG">
-            </div>
-            <div class="suggestion">
-                <p id="weatherSuggestion"></p>
-            </div>
-            <div class="weatherData">
+            <div class="weatherData six columns">
+                <div class="suggestion">
+                    <p id="weatherSuggestion"></p>
+                </div>
                 <img src="assets/img/cloudy.jpeg" alt="Cloudy weather" class="pictures hidden" id="cloudyPic">
                 <img src="assets/img/rain.jpeg" alt="Rainy weather" class="pictures hidden" id="rainPic">
                 <img src="assets/img/sunny.jpeg" alt="Sunny weather" class="pictures hidden" id="sunnyPic">
@@ -68,9 +58,6 @@
         </div>
     </div>
     <div class="failed hidden">
-        <div class="header">
-            <button class="devPage">About The Devs</button>
-        </div>
         <h2 class="failHeader">Unable to Locate your City. Please try again</h2>
         <button class="return"><a href="./index.html"class="return">Try Again</a></button>
     </div>
