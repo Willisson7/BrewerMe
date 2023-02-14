@@ -3,6 +3,7 @@ var submit = document.querySelector('.submit');
 var cityInput = document.querySelector('.searchBox');
 var stateInput = document.querySelector('#stateInput')
 var backBtn = document.querySelector('.return');
+var aboutBtn = document.querySelector('.devPage');
 // Fetching current weather base on Coordinates
 
 //Find City/Brewery Input
@@ -96,8 +97,10 @@ function currentWeather(city) {
         );
 }
 
-backBtn.addEventListener('click', function(){
-    location.reload();
+aboutBtn.addEventListener('click', function(){
+    document.querySelector(".searchMe").classList.add("hidden")
+    document.getElementById("invis").classList.add("hidden")
+    document.querySelector('.developers').classList.remove("hidden")
 })
 
 submit.addEventListener('click', function (event) {
